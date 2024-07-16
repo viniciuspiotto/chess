@@ -40,6 +40,9 @@ public class ChessMatch {
         if (!board.thereIsPiece(pos)) {
             throw new ChessException("There is no piece on source position");
         }
+        if (!board.piece(pos).isThereAnyPossibleMove()) {
+            throw new ChessException("There is no possible move on source position");
+        }
     }
 
     private Piece makeMove(Position source, Position target) {
