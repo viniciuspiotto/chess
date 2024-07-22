@@ -28,32 +28,36 @@ The above UML diagram provides a high-level overview of the application's archit
     cd chess
     ```
 
-### Running the Application
-1. Compile the project:
-    ```bash
-    javac -d out/production/chess src/application/Program.java
-    ```
-2. Run the game:
-    ```bash
-    java -cp out/production/chess application.Program
-    ```
-
 ## Project Structure
 
 ```bash
 chess-game-java/
 ├── chess.iml
 ├── img
-│ └── chess-system-design.png # UML Diagram
-├── out
-│ └── production
-│ └── chess
-│ └── application
-│ └── Program.class # Compiled bytecode
-├── README.md # This file
+│   └── chess-system-design.png
+├── README.md
 └── src
-└── application
-└── Program.java # Main class
+    ├── application
+    │   ├── Program.java
+    │   └── UI.java
+    ├── boardgame
+    │   ├── BoardException.java
+    │   ├── Board.java
+    │   ├── Piece.java
+    │   └── Position.java
+    └── chess
+        ├── ChessException.java
+        ├── ChessMatch.java
+        ├── ChessPiece.java
+        ├── ChessPosition.java
+        ├── Color.java
+        └── pieces
+            ├── Bishop.java
+            ├── King.java
+            ├── Knight.java
+            ├── Pawn.java
+            ├── Queen.java
+            └── Rook.java
 ```
 
 ## Contact
